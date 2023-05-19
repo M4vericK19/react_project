@@ -1,19 +1,96 @@
-/* Surprise! You probably thought you could just forget
-the line of code you just learned! Nope, not on my watch!
+function Navbar() {
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="#">Navbar</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
 
-Try to write that 1-liner of React code again! This time,
-see if you can figure out how to render an <ul> with 2+ <li>s inside*/
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ol className="navbar-nav mr-auto">
+                <li className="nav-item active">
+                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
+                </li>
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a className="dropdown-item" href="#">Action</a>
+                    <a className="dropdown-item" href="#">Another action</a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link disabled" href="#">Disabled</a>
+                </li>
+                </ol>
+                <form className="form-inline my-2 my-lg-0">
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    )
+}
+
+function MainContent() {
+    return (
+        <div>
+            <h1>MENU</h1>
+            <ol>
+                <li>Car 1</li>
+                <li>Car 2</li>
+                <li>Car 2</li>
+                <li>Car 4</li>
+            </ol>
+        </div>
+    )
+}
+
+function MyTable() {
+    return (
+        <table>
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+        </tr>
+        <tr>
+            <td>Elsa</td>
+            <td>Jhonson</td>
+        </tr>
+        </table>
+    )
+}
+
+const menu = (
+    <nav>
+        <Navbar />
+        <MainContent />
+        <h1>Bob's Bistro</h1>
+        <ul>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <MyTable />
+    </nav>
+)
+
+// Challenge: Create your own custom React component!
+// Call it "MainContent", and have it return a simple
+// h1 element that says "I'm learning React!"
+
+// Afterward, render it below the Navbar (which
+// you can do inside the ReactDOM.render call below)
 
 ReactDOM.render(
-    <div>
-    <h1>This is heading 1</h1>
-    <h2>This is heading 2</h2>
-    <h3>This is heading 3</h3>
-    <p>This is a red paragraph.</p>
-    <strong>This text is important!.</strong>
-    <i>This text is italic.</i>
-    <a href="https://www.w3schools.com">This is a link</a>
-    <img src="https://e7.pngegg.com/pngimages/410/73/png-clipart-jumpman-air-jordan-graphics-logo-nike-white-text.png" width="150" height="150"></img>
-    </div>,
+    menu,
     document.getElementById("root")
 )
