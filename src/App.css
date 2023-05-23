@@ -1,31 +1,18 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: #282D35;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .React-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +22,85 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  background-color: #21222A;
+  height: 15px;
+  padding: 30px 10px;
+}
+
+.App-header > h3 {
+  margin-right: auto;
+  color: #61DAFB;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.App-header > small {
+  margin-left: auto;
+  color: #DEEBF8;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.App-header > img {
+  height: 50px;
+  margin-right: 7px;
+}
+
+.App-content {
+  background-color: #34373f;
+  min-height: 10vh;
+  display: flex;
+  padding: 25px 25px;
+  justify-content: space-between;
+  font-size: 20px;
+  color: white;
+}
+
+.App-content > img {
+  width: 800px;
+}
+
+.App-table {
+  background-color: #545558;
+  margin-left: 20px;
+  line-height: 19px;
+}
+
+.App-footer {
+  display: flex;
+  align-items: center;
+  background-color: #21222A;
+  height: 15px;
+  padding: 30px 10px;
+}
+
+.App-footer > a {
+  margin-left: auto;
+}
+
+.App-footer > img {
+  width: 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > li {
+  padding: 10px;
+}
+
+.App-table {
+  text-align: left;
+  padding: 5px;
 }
