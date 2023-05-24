@@ -4,9 +4,9 @@
 
 .App {
   text-align: center;
-  font-family: Inter, sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 300;
   height: 100vh;
-  background-color: #282D35;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,17 +26,25 @@
 
 .App-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   background-color: #21222A;
-  height: 15px;
-  padding: 30px 10px;
+  height: 60px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: relative;
 }
 
 .App-header > h3 {
-  margin-right: auto;
-  color: #61DAFB;
-  font-weight: 500;
-  font-size: 45px;
+  margin-left: auto;
+  color: #ffffff;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 50;
+  font-size: 25px;
 }
 
 .App-header > small {
@@ -47,15 +55,17 @@
 }
 
 .App-header > img {
-  height: 50px;
-  margin-right: 7px;
+  height: 40px;
+  line-height: 18.4px;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .App-content {
-  background-color: #34373f;
+  background-image: radial-gradient(at center, #0F130A 20%, #7E222200 100%);
   min-height: 10vh;
   display: flex;
-  padding: 25px 25px;
+  padding: 10px 10px;
   justify-content: space-between;
   font-size: 20px;
   color: white;
@@ -65,29 +75,55 @@
   width: 800px;
 }
 
+.App-content > video {
+  position: relative;
+  width: 1349px; 
+  height: 520px;
+  object-fit: cover;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  opacity: 1;
+  z-index: -1;
+}
+
 .App-table {
-  background-color: #545558;
+  background-color: #000000;
   margin-left: 20px;
   line-height: 19px;
+  opacity: .8;
 }
 
 .App-footer {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: end;
+  align-content: center;
   background-color: #21222A;
-  height: 15px;
-  padding: 30px 10px;
+  height: 80px;
+  padding: 10px 25px;
+  justify-content: center;
 }
 
-.App-footer > a {
-  margin-left: auto;
+.jenkins-footer {
+  padding: 10px 25px;
 }
 
-.App-footer > img {
-  width: 40px;
+.jenkins-footer > img {
+  width: 20px;
+}
+
+.confluence-footer {
+  padding: 10px 25px;
+}
+
+.confluence-footer > img {
+  width: 20px;
 }
 
 .App-link {
+  display: flex;
+  flex-wrap: wrap;
   color: #61dafb;
 }
 

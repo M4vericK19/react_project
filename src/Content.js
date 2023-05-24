@@ -35,6 +35,9 @@ const TestDetails = props => {
   function AppContent() {
     return (
       <content className="App-content">
+        <video autoPlay loop muted> 
+          <source src="https://oregan.net/wp-content/uploads/2022/06/iStock-125396672SD-Video-Wall.mp4" />
+        </video>
         <img src="stability.png" alt="stability" />
         <TestDetails test_name="Sanity" build="820014" launcher="47.8" pass={10} fail={5} skip={1} />
         <TestDetails test_name="PreATP" build="821245" launcher="54.9" pass={22} fail={1} skip={4} />
